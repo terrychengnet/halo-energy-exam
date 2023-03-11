@@ -1,4 +1,5 @@
 import StockTracker from "./StockTracker";
+import React, { useState } from 'react';
 
 const CodeTest3: React.FC = () => {
   return (
@@ -45,6 +46,8 @@ const StockTrackerPanel: React.FC = () => {
     <div className="gap-2">
       <input className="w-32" placeholder="Stock name" />
       <button>Start Tracking</button>
+
+      {StockTracker}
     </div>
   );
 };

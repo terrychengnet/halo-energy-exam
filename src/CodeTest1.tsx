@@ -2,9 +2,7 @@ import { useState } from "react";
 
 const sendOrder = () => {
   return new Promise<boolean>((resolve) => {
-    setTimeout(() => {
-      resolve(Math.random() > 0.5);
-    }, 1000);
+      resolve(Math.random() > 0);
   });
 };
 
@@ -34,7 +32,11 @@ const CodeTest1: React.FC = () => {
       </h1>
       <hr />
       <div>Send Count: {sendCount}</div>
-      <div>Order Count: {orderCount} (<span className="text-green-600">Success: {successOrderCount}</span> <span className="ml-2 text-red-600">Failed: {failOrderCount}</span>)</div>
+      <div>Order Count: {orderCount} (
+        <span className="text-green-600">Success: {successOrderCount}</span> 
+        <span className="ml-2 text-red-600">Failed: {failOrderCount}</span> 
+        )
+      </div>
       <button onClick={handleSendOrder} className="w-32">
         Send Order
       </button>
